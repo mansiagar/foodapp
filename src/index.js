@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
-import { CardBox } from "./Component/CardBox";
-import Header from "./Component/header";
+
+import StoreContextProvider from "./context/StoreContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
-    <Header />
-    <CardBox />
+    <StoreContextProvider>
+      <App />
+    </StoreContextProvider>
   </React.StrictMode>
 );
